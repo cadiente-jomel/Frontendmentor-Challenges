@@ -23,10 +23,10 @@ export default (props: any) => {
     return (
     <S.Row>
         <FullCarousel carousel={showCarousel} setShowCarousel={setShowCarousel}/>
-        <S.Column>
+        <S.Column className="column-product-container">
             <Carousel showCarousel={showCarousel} setShowCarousel={setShowCarousel}/>
         </S.Column>
-        <S.Column className="u-margin-top-medium">
+        <S.Column className="u-margin-top-medium column-product-details">
             <ProductDetails/>  
             <div className="flex u-margin-top-medium">
                 <Quantiy />

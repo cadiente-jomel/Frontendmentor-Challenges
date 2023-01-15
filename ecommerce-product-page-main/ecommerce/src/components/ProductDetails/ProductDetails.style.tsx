@@ -9,7 +9,7 @@ export const CompanyName = styled.p`
 `
 
 export const ProductName = styled.h1`
-    font-size: 5rem;
+    font-size: 3rem;
 
     @media all and (max-width: 770px) {
         font-size: 3rem;
@@ -18,14 +18,16 @@ export const ProductName = styled.h1`
 
 export const ProductDetails = styled.p`
     color: var(--blue);
-    font-size: 2vh;
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 3rem;
 `
 
 export const ProductPrice = styled.h3`
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center
 `
 
 export const DiscountPercentage = styled.span`
@@ -35,7 +37,7 @@ export const DiscountPercentage = styled.span`
     border-radius: 10px;
     margin-left: 2rem;
     padding: 0.5rem 1rem;
-    font-size: 2.1rem;
+    font-size: 2rem;
     @media all and (max-width: 770px) {
         font-size: 1.7rem;
     }
@@ -44,7 +46,7 @@ export const DiscountPercentage = styled.span`
 export const OldProductPrice = styled.p`
     color: var(--blue);
     text-decoration: line-through;    
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 5px;
     @media all and (max-width: 770px) {

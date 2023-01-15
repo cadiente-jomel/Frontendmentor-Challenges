@@ -28,12 +28,12 @@ function App() {
     <div className="w-full flex outer-flex-nav">
       <div className="u-margin-right-medium flex-logo">
         <img onClick={() => setShowOverlay(true)}className="icon-menu" src="/assets/images/icon-menu.svg" alt="icon-menu" />
-        <img src="/assets/images/logo.svg" alt="Logo" />
+        <img className="logo" src="/assets/images/logo.svg" alt="Logo" />
         <NavigationMenu/>
       </div>
 
       <div className="flex-nav relative">
-          <img src="/assets/images/icon-cart-nav.svg" className="u-margin-right-small cart-btn" alt="cart-icon" onClick={showCart}/>  
+          <img src="/assets/images/icon-cart-nav.svg" className="cart-btn" alt="cart-icon" onClick={showCart}/>  
           <CartCounter q={cartProductQuantity} />
 
           <Profile/>

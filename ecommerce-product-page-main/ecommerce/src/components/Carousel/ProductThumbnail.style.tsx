@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 
 export const ImageThumbnail = styled.img`
-    width: 9rem; 
+    width: 8rem; 
     border-radius: 2rem;
     &:hover {
         filter: opacity(.7);

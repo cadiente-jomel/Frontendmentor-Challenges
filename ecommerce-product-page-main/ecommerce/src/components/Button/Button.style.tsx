@@ -10,7 +10,7 @@ export const Button = styled.button`
     font-size: var(--default-font-size);
     font-weight: 700;
     color: var(--white);
-    padding: 3rem 6rem;
+    padding: 2rem;
     width: 60%;
 
 

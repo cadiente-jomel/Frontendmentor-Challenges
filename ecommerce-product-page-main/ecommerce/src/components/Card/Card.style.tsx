@@ -8,5 +8,6 @@ export const ProductCard = styled.img`
 
     @media all and (max-width: 770px) {
         border-radius: 0;
+        pointer-events: none;
     }
 `;

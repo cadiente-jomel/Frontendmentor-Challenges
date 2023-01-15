@@ -18,8 +18,12 @@ export default (props: any) => {
                 <img src="/assets/images/icon-previous.svg" alt="icon-previous" />
             </div>
             <CarouselContainer>
-                <Card src={`/assets/images/image-product-${imgIndex}.jpg`}/>
-                <ProductThumbnail setImgIndex={setImgIndex}/>
+                <div className="full-carousel-image-container">
+                    <Card src={`/assets/images/image-product-${imgIndex}.jpg`}/>
+                </div>
+                <div className="overlay-thumbnail">
+                    <ProductThumbnail setImgIndex={setImgIndex}/>
+                </div>
             </CarouselContainer>
             <div onClick={() => setImgIndex((prev: any) =>  prev >= 4 ? 1 : prev + 1)} className="control-btn">
                 <img src="/assets/images/icon-next.svg" alt="icon-next" />
