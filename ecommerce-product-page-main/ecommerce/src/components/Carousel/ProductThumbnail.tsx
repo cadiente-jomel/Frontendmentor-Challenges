@@ -2,7 +2,7 @@ import {useState} from 'react';
 import * as S from './ProductThumbnail.style';
 
 
-const handleChange = (e: any, setImgIndex: any) => {
+const handleChange = (e: any, setImgIndex: Function) => {
 
     const els = Array.from(e.target.parentElement.children);
     els.forEach((el: any) => {
@@ -13,8 +13,11 @@ const handleChange = (e: any, setImgIndex: any) => {
     e.target.classList.add("img-selected");
 }
 
+interface Props {
+    setImgIndex: Function
+}
 
-export default (props: any) => {
+export default (props: Props) => {
     return (
         <S.Container>
             <S.ImageThumbnail onClick={(e: any) => {handleChange(e, props.setImgIndex)}}data-key={1} src="/assets/images/image-product-1-thumbnail.jpg"/>

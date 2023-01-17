@@ -10,9 +10,9 @@ import { OverlayContainer } from './components/Carousel/FullCarousel.style';
 import NavigationMenu, { MobileNavigationMenu } from './components/NavigationMenu/NavigationMenu';
 
 const showCart = () => {
-  const cart: any = document.querySelector(".cart");
+  const cart: Element | null = document.querySelector(".cart");
 
-  cart.classList.toggle('active')
+  cart?.classList.toggle('active')
 }
 function App() {
   const [cartProductQuantity, setCartProductQuantity] = useState(0);

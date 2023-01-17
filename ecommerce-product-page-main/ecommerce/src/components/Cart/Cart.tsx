@@ -3,7 +3,12 @@ import * as S from './Cart.style';
 import CartItem from '../CartItem/CartItem';
 import { CheckoutButton } from '../Button/CheckoutButton.style';
 
-const ProductItem = (props: any) => {
+interface Props {
+    cartProductQuantity: number,
+    setCartProductQuantity: Function
+}
+
+const ProductItem = (props: Props) => {
     if(props.cartProductQuantity <= 0) {
         return <h3 className="empty">Your cart is empty</h3>
     } else {
@@ -38,7 +43,7 @@ const ProductItem = (props: any) => {
 }
 
 
-export default (props: any) => {
+export default (props: Props) => {
 
     return <S.Cart className="cart">
         <S.CartTitle>Cart</S.CartTitle>    

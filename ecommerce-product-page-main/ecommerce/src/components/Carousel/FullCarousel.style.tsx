@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface Props {
-  isClicked: any,
+  isClicked: boolean,
 }
 export const OverlayContainer = styled.div`
     margin: 0 auto;

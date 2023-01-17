@@ -1,5 +1,10 @@
 import * as S from './CartItem.style';
 
+interface Props {
+    productQuantity: number,
+    total: number
+}
+
 const removeItem = () => {
     const item = document.querySelector(".cart")?.children[1];
     item?.remove();
@@ -8,7 +13,7 @@ const removeItem = () => {
 } 
 
 
-export default (props: any) => (
+export default (props: Props) => (
     <S.Container>
         <S.ItemContainer>
             <div className="cart-flex">

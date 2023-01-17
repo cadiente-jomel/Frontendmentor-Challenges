@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface Props {
-    n: any
+    n: number
 }
 
 export const Counter = styled.div`

@@ -1,5 +1,9 @@
 import * as S from './CartCounter.style';
 
-export default (props: any) => {
+interface Props {
+    q: number
+}
+
+export default (props: Props) => {
     return  <S.Counter n={props.q}>{props.q}</S.Counter>
 }

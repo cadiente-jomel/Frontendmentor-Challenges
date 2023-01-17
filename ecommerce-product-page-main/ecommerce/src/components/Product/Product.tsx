@@ -8,23 +8,28 @@ import CartItem from '../CartItem/CartItem';
 import Carousel from '../Carousel/Carousel';
 import FullCarousel from '../Carousel/FullCarousel';
 
-export default (props: any) => {
+
+interface Props {
+    setCartProductQuantity: Function
+}
+
+export default (props: Props) => {
     const [showCarousel, setShowCarousel] = useState(false);
 
-    const AddCartComponent = (q: any) => {
+    const AddCartComponent = () => {
         const quantity = document.querySelector('.quantity-counter');
 
         if(Number(quantity?.textContent) == 0) {
             alert("Nothing to add")
             return
         }
-        props.setCartProductQuantity((prev: any) => prev + Number(quantity?.textContent));
+        props.setCartProductQuantity((prev: number) => prev + Number(quantity?.textContent));
     }
     return (
     <S.Row>
         <FullCarousel carousel={showCarousel} setShowCarousel={setShowCarousel}/>
         <S.Column className="column-product-container">
-            <Carousel showCarousel={showCarousel} setShowCarousel={setShowCarousel}/>
+            <Carousel setShowCarousel={setShowCarousel}/>
         </S.Column>
         <S.Column className="u-margin-top-medium column-product-details">
             <ProductDetails/>  
