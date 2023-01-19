@@ -55,9 +55,9 @@ main {
   gap: 2rem;
 }
 
-.logo {
+/* .logo {
   width: 23%;
-}
+} */
 
 .u-margin-left-small{
   margin-left: 1rem;
@@ -80,17 +80,17 @@ main {
   margin-top: 5rem;
 }
 
-.u-margin-top-large {
+/* .u-margin-top-large {
   margin-top: 8rem;
-}
+} */
 
-.navigation-menu {
+/* .navigation-menu {
   align-items: center;
   display: flex;
   font-size: var(--default-font-size);
-  margin-top: 3rem;
+  margin-top: 3rem; */
   /* padding-left: 5rem; */
-}
+/* } */
 
 .selected::after {
   content: "";
@@ -105,30 +105,30 @@ main {
 }
 
 
-.active {
+/* .active {
   display: inline-block !important;
   top: 8rem !important;
   transition: top .5s ease;
-}
+} */
 
 .relative {
   position: relative;
 }
 
-.column-product-details,
+/* .column-product-details,
 .column-product-container {
   width: 40%
-}
+} */
 
-.column-product-container {
+/* .column-product-container {
   display: flex;
   justify-content: center;
-}
+} */
 
-.column-product-images {
+/* .column-product-images {
   margin: 0 auto;
   position: relative;
-}
+} */
 
 
 .counter-container {
@@ -161,7 +161,7 @@ main {
   margin: auto 0;
 }
 
-.empty {
+/* .empty {
   text-align: center;
   padding: 4rem 0;
   font-size: 3rem;
@@ -170,14 +170,14 @@ main {
 
 .empty--hide {
   display: none
-}
-
+} */
+/* 
 .img-selected {
   border: 3px solid var(--color-primary-darker);
   filter: opacity(.7);
-}
+} */
 
-.test {
+/* .test {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -187,9 +187,9 @@ main {
   background-color: rgba(0,0,0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
-}
+} */
 
-.control-btn {
+/* .control-btn {
   background-color: var(--white);
   display: flex;
   align-items: center;
@@ -206,21 +206,21 @@ main {
 }
 .control-btn:last-child {
   margin-left: 10rem;
-}
+} */
 
-.control-close {
+/* .control-close {
   position: absolute;
   right: 33%;
   top: 13%;
   width: 3rem;
   z-index: 100;
-}
+} */
 
-.icon-menu {
+/* .icon-menu {
   display: none;
-}
+} */
 
-.navigation-menu-container {
+/* .navigation-menu-container {
     background-color: var(--white);
     height: 100%;
     width: 60%;
@@ -231,15 +231,15 @@ main {
     padding: 0 7rem;
     z-index: 100;
     position: relative;
-}
-.m-icon-close {
+} */
+/* .m-icon-close {
     position: absolute;
     left: 2rem;
     top: 2rem;
     width: 2rem;
-}
+} */
 
-.counter-cart {
+/* .counter-cart {
   width: 2rem;
   height: 2rem;
   color: var(--white);
@@ -252,77 +252,77 @@ main {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-}
+} */
 
-.full-carousel-image-container {
+/* .full-carousel-image-container {
   width: 50vh;
   margin: 0 auto;
-}
+} */
 
-.overlay-thumbnail {
+/* .overlay-thumbnail {
   width: 50vh;
   margin: 2rem auto;
-}
+} */
 
-.m-control-btn-left, .m-control-btn-right {
+/* .m-control-btn-left, .m-control-btn-right {
     position: absolute;
     top: 50%;
     border: 1px solid var(--grayish-blue);
     transform: translateY(-150%);
     display: none;
-}
+} */
 
-.m-control-btn-left {
+/* .m-control-btn-left {
     left: 0;
 }
 
 .m-control-btn-right {
     right: 0;
-}
+} */
 
 @media all and (max-width: 770px) {
   body {
     margin: 0 2rem;
   }
 
-  nav { 
+  /* nav { 
     border-bottom: none;
-  }
+  } */
 
-  .flex {
+  /* .flex {
     flex-direction: column;
-  }
+  } */
 
-  .mobile-navigation-menu {
+  /* .mobile-navigation-menu {
     padding: 10rem 0;
     position: absolute;
     left: 47px;
-  }
+  } */
 
-  .navigation-menu {
+  /* .navigation-menu {
     display: none;
-  }
-  .outer-flex-nav {
+  } */
+  /* .outer-flex-nav {
     flex-direction: row;
-  }
+  } */
 
-  .counter-container {
+  /* .counter-container {
     width: 100%;
-  }
+  } */
 
-  .icon-menu {
+  /* .icon-menu {
     display: inline-block;
-  }
+  } */
 
-  .column-product-details, .column-product-container {
+  /* .column-product-details, .column-product-container {
     width: 100%;
-  }
+  } */
 
-  .logo {
+  /* .logo {
     width: 100%;
-  }
+  } */
 
-  .m-control-btn-left, .m-control-btn-right {
+  /* .m-control-btn-left, .m-control-btn-right {
     display: flex;
-  }
+  } */
 }

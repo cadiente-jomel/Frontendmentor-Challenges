@@ -1,30 +1,65 @@
 import {useState} from 'react';
-import * as S from './Carousel.style';
+import styled from 'styled-components';
+import { S as Styled } from './FullCarousel';
+// import * as S from './Carousel.style';
 import Card from '../Card/Card';
 import ProductThumbnail from './ProductThumbnail';
 
-interface Props {
+interface CarouselStyledProps {
+    isLeft?: boolean,
+    isRight?: boolean
+}
+
+interface CarouselComponentProps {
     setShowCarousel: Function
 }
 
+const S = {
+    CarouselContainer: styled.div`
+        /* width: 100%; */
+        margin: 0 auto;
+        position: relative;
 
-const handleChange = (setShowCarousel: Function) => {
-    setShowCarousel(true)
+        @media all and (max-width: 770px) {
+            width: 100%;
+        }
+    `,
+    MobileCarouselControlBtn: styled(Styled.CarouselControlBtn)`
+        position: absolute;
+        top: 50%;
+        border: 1px solid var(--grayish-blue);
+        transform: translateY(-150%);
+        display: none;
+        left: ${({isLeft}: CarouselStyledProps) => isLeft ? "0": "initial"};
+        right: ${({isRight}: CarouselStyledProps) => isRight ? "0": "initial"};
+
+        @media all and (max-width: 770px) {
+            display: flex;
+        }
+    `,
+    MobileCarouselControlIcon: styled.img``,
+
 }
 
-export default (props: Props) => {
+
+
+export default (props: CarouselComponentProps) => {
     const [imgIndex, setImgIndex] = useState(1)
+
+    const handleChange = (setShowCarousel: Function) => {
+        setShowCarousel(true)
+    }
+
     return(
-        <S.CarouselContainer className="column-product-images">
-            <div onClick={() => setImgIndex((prev: number) =>  prev <= 1 ? 4 : prev - 1)}
-                 className="control-btn m-control-btn-left">
-                <img src="/assets/images/icon-previous.svg" alt="icon-previous" />
-            </div>
+        <S.CarouselContainer>
+            <S.MobileCarouselControlBtn isLeft={true} isRight={false} onClick={() => setImgIndex((prev: number) =>  prev <= 1 ? 4 : prev - 1)}>
+                <S.MobileCarouselControlIcon src="/assets/images/icon-previous.svg" alt="icon-previous" />
+            </S.MobileCarouselControlBtn>
             <Card onClick={() => handleChange(props.setShowCarousel)} src={`/assets/images/image-product-${imgIndex}.jpg`}/>
             <ProductThumbnail setImgIndex={setImgIndex}/>
-            <div onClick={() => setImgIndex((prev: number) =>  prev >= 4 ? 1 : prev + 1)} className="control-btn m-control-btn-right">
-                <img src="/assets/images/icon-next.svg" alt="icon-next" />
-            </div>
+            <S.MobileCarouselControlBtn isLeft={false} isRight={true} onClick={() => setImgIndex((prev: number) =>  prev >= 4 ? 1 : prev + 1)}>
+                <S.MobileCarouselControlIcon src="/assets/images/icon-next.svg" alt="icon-next" />
+            </S.MobileCarouselControlBtn>
         </S.CarouselContainer>
     )
 }

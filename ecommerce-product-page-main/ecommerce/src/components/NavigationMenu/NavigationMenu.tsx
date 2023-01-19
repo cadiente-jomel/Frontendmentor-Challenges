@@ -1,25 +1,47 @@
+import styled from 'styled-components';
 import Menu from '../Menu/Menu';
+
+const NavChoices: string[] = ['Collections', 'Men', 'Women', 'About', 'Contact']
+const S = {
+  UnorderedList: styled.ul` 
+    align-items: center;
+    display: flex;
+    font-size: var(--default-font-size);
+    margin-top: 3rem;
+
+    @media all and (max-width: 770px) {
+      display: none;
+    }
+ `,
+
+  MobileUnorderedList: styled.ul`
+    padding: 10rem 0;
+    position: absolute;
+    left: 47px;
+  `
+
+}
 
 export default () => {
     return (
-        <ul className="navigation-menu inner-nav">
-          <Menu menuName="Collections"/>
-          <Menu menuName="Men"/>
-          <Menu menuName="Women" selected/>
-          <Menu menuName="About"/>
-          <Menu menuName="Contact"/>
-        </ul> 
+        <S.UnorderedList>
+          {
+            NavChoices.map((choice, index) => (
+              <Menu key={index} menuName={choice}/>
+            ))
+          }
+        </S.UnorderedList> 
     )
 }
 
 export const MobileNavigationMenu = () => {
     return (
-        <ul className="mobile-navigation-menu inner-nav">
-          <Menu menuName="Collections"/>
-          <Menu menuName="Men"/>
-          <Menu menuName="Women" selected/>
-          <Menu menuName="About"/>
-          <Menu menuName="Contact"/>
-        </ul> 
+        <S.MobileUnorderedList>
+          {
+            NavChoices.map((choice, index) => (
+              <Menu key={index} menuName={choice}/>
+            ))
+          }
+        </S.MobileUnorderedList> 
     )
 }
