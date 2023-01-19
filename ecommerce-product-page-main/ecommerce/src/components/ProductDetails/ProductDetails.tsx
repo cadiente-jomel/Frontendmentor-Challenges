@@ -13,10 +13,6 @@ const S = {
     ProductName: styled.h1`
         font-size: 3rem;
         margin-bottom: 1.2rem;
-
-        @media all and (max-width: 770px) {
-            font-size: 3rem;
-        }
     `,
 
     ProductDetails: styled.p`
@@ -41,9 +37,9 @@ const S = {
         border-radius: 10px;
         margin-left: 2rem;
         padding: 0.5rem 1rem;
-        font-size: 2rem;
-        @media all and (max-width: 770px) {
-            font-size: 1.7rem;
+        font-size: 1.7rem;
+        @media all and (min-width: 770px) {
+            font-size: 2rem;
         }
     `,
 
@@ -53,9 +49,6 @@ const S = {
         font-size: 2rem;
         font-weight: 700;
         margin-bottom: 5px;
-        @media all and (max-width: 770px) {
-            font-size: 2rem;
-        }
     `
 }
 

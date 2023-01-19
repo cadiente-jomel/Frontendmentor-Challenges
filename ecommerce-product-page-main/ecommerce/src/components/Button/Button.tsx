@@ -6,20 +6,19 @@ export const S = {
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        color: var(--white);
         font-family: inherit;
         font-size: var(--default-font-size);
         font-weight: 700;
-        color: var(--white);
         padding: 2rem;
-        width: 60%;
-
-
-        @media all and (max-width: 770px) {
-            width: 100%;
-        }
+        width: 100%; 
 
         &:hover {
             background-color: var(--color-primary-hovered);
+        }
+
+        @media all and (min-width: 770px) {
+            width: 60%;
         }
     `
 }

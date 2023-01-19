@@ -18,22 +18,19 @@ export const S = {
     CarouselContainer: styled.div`
         margin: 0 auto;
         position: relative;
-
-        @media all and (max-width: 770px) {
-            width: 100%;
-        }
+        width: 100%;
     `,
     MobileCarouselControlBtn: styled(Styled.CarouselControlBtn)`
         position: absolute;
         top: 50%;
         border: 1px solid var(--grayish-blue);
         transform: translateY(-150%);
-        display: none;
+        display: flex;
         left: ${({isLeft}: CarouselStyledProps) => isLeft ? "0": "initial"};
         right: ${({isRight}: CarouselStyledProps) => isRight ? "0": "initial"};
-
-        @media all and (max-width: 770px) {
-            display: flex;
+        
+        @media all and (min-width: 770px) {
+            display: none;
         }
     `,
     MobileCarouselControlIcon: styled.img``,

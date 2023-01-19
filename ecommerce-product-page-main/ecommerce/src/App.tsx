@@ -12,9 +12,13 @@ import { S as Styled } from './components/Product/Product';
 
 const S = {
   MainContainer: styled.main`
-    margin-top: 8rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
+
+    @media all and (min-width: 770px) {
+      margin-top: 8rem;
+    }
   `,
   NavigationMenuContainer: styled.div` 
     background-color: var(--white);
@@ -35,42 +39,33 @@ const S = {
     width: 2rem;
   `,
   IconMenu: styled.img` 
-    display: none;
-
-    @media all and (max-width: 770px) {
-      display: inline-block;
+    display: inline-block;
+    
+    @media all and (min-width: 770px) {
+      display: none;
     }
   `,
   Logo: styled.img` 
-    width: 23%;
-    @media all and (max-width: 770px) {
-      width: 100%;
+    width: 100%;
+    @media all and (min-width: 770px) {
+      width: 23%;
     }
   `,
   LogoContainer: styled(Styled.QuantityContainer)`
     margin-top: 0;
-    margin-right: 8rem; 
-
-    @media all and (max-width: 770px) {
-      flex-direction: row;
-    }
+    margin-right: 8rem;
+    flex-direction: row;
   `,
   OuterNavigationContainer: styled(Styled.QuantityContainer)`
     width: 100%;
     margin-top: 0;
-
-    @media all and (max-width: 770px) {
-      flex-direction: row;
-    }
+    flex-direction: row;
   `,
   CartBtn: styled.img``,
   CartProfileContainer: styled(Styled.QuantityContainer)`
     margin-top: 0;
     position: relative;
-
-    @media all and (max-width: 770px) {
-      flex-direction: row;
-    }
+    flex-direction: row;
   `
 }
 

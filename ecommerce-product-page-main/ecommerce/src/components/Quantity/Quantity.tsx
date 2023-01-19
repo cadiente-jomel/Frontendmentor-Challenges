@@ -12,11 +12,11 @@ const S = {
      border-radius: 5px;
      display: flex;
      padding: 2rem;
-     width: 40%;
+     width: 100%;
      justify-content: space-between;
-
-     @media all and (max-width: 770px) {
-        width: 100%;
+     
+     @media all and (min-width: 770px) {
+         width: 40%;
      }
    `,
    CounterBtn: styled.span``,

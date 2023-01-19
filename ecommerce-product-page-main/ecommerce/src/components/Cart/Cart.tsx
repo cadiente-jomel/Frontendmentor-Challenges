@@ -16,29 +16,30 @@ interface CartComponentStyledProps {
 
 const S = {
     Cart: styled.div`
-        width: 35rem;
-        border-radius: 1.2rem;
         background-color: var(--white);
+        border-radius: 1.2rem;
         box-shadow: 0 0 1rem var(--black);
-        position: absolute;
-        right: 10rem;
-        padding: 2rem; 
         display: ${({ isActive }: CartComponentStyledProps) => isActive ? "inline-block" : "none"};
+        position: absolute;
+        padding: 2rem; 
+        right: -1rem;
         top: 8rem;
         transition: top .5s ease;
+        width: 95vw;
         z-index: 100;
-    
-        @media all and (max-width: 770px) {
-            width: 95vw;
-            right: -1rem;
+        
+        @media all and (min-width: 770px) {
+            width: 35rem;
+            right: 10rem;
         }
     `,
     CartTitle: styled.h3`
-        font-size: 2rem;
+        font-size: 3rem;
         border-bottom: 2px solid var(--grayish-blue);
         padding: 1rem 2rem; 
-        @media all and (max-width: 770px) {
-            font-size: 3rem;
+
+        @media all and (min-width: 770px) {
+            font-size: 2rem;
         }
     `,
     Container: styled.div`
@@ -52,13 +53,13 @@ const S = {
         width: 100%;
     `,
     ItemImage: styled.img`
-        width: 5rem;
-        height: 5rem;
+        width: 12rem;
+        height: 12rem;
         border-radius: 5px;
-    
-        @media all and (max-width: 770px) {
-            width: 12rem;
-            height: 12rem;
+        
+        @media all and (min-width: 770px) {
+            width: 5rem;
+            height: 5rem;
         }
     `,     
     ItemDetails: styled.div`
@@ -72,10 +73,7 @@ const S = {
 
     CartFlex: styled(Styled.QuantityContainer)`
         margin-top: 0;
-
-        @media all and (max-width: 770px) {
-            flex-direction: row;
-        }
+        flex-direction: row;
     `,
     ItemName: styled.p`
         color: var(--blue); 

@@ -5,12 +5,12 @@ const NavChoices: string[] = ['Collections', 'Men', 'Women', 'About', 'Contact']
 const S = {
   UnorderedList: styled.ul` 
     align-items: center;
-    display: flex;
+    display: none;
     font-size: var(--default-font-size);
     margin-top: 3rem;
-
-    @media all and (max-width: 770px) {
-      display: none;
+    
+    @media all and (min-width: 770px) {
+      display: flex;
     }
  `,
 

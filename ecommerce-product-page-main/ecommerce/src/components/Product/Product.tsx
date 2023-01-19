@@ -18,23 +18,24 @@ interface StyledProps {
 export const S = {
     Row: styled.div`
         display: flex;
+        flex-direction: column;
+        gap: 2rem; 
         justify-content: center;
         max-width: var(--grid-width);
-        gap: 10rem;
-
-        @media all and (max-width: 770px) {
-            flex-direction: column;
-            gap: 2rem; 
+        
+        @media all and (min-width: 770px) {
+            gap: 10rem;
+            flex-direction: row;
         }
     `,
     Column: styled.div`
-        width: 40%;
-        margin-top: ${({ isProductDetails }: StyledProps) => isProductDetails ? "5rem" : 0};
         display: ${({ isProductDetails }: StyledProps) => isProductDetails ? "block": "flex"};
         justify-content: ${({ isProductDetails }: StyledProps) => isProductDetails ? "initial": "center"};
-
-        @media all and (max-width: 770px) {
-            width: 100%;
+        margin-top: ${({ isProductDetails }: StyledProps) => isProductDetails ? "5rem" : 0};
+        width: 100%;
+        
+        @media all and (min-width: 770px) {
+            width: 40%;
         }
     `,
     QuantityContainer: styled.div`
@@ -46,9 +47,10 @@ export const S = {
         margin-top: 5rem;
         -webkit-box-align: center;
         -webkit-box-pack: justify;
+        flex-direction: column;
 
-        @media all and (max-width: 770px) {
-            flex-direction: column;
+        @media all and (min-width: 770px) {
+            flex-direction: row;
         }
     `,
     CartIcon: styled.img``,

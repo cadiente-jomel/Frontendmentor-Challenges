@@ -37,11 +37,5 @@ body {
   background-color: var(--white);
   font-family: 'Kumbh Sans', sans-serif;
   overflow-x: hidden;
-  margin: 0 1rem;
-}
-
-@media all and (max-width: 770px) {
-  body {
-    margin: 0 2rem;
-  }
+  margin: 0 2rem;
 }

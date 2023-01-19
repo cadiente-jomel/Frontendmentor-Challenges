@@ -8,11 +8,12 @@ const S = {
     Menu: styled.li`
         list-style-type: none; 
         height: 5rem;
+        font-size: 2rem;
         &::after {
             border-bottom: 5px solid var(--color-primary-darker); 
             content: "";
             display: block;
-            margin-top: 3.6rem;
+            margin-top: 1rem;
             transition: all .2s ease;
             width: 0;
         }
@@ -25,11 +26,10 @@ const S = {
             margin-right: 3rem;
         }
 
-        @media all and (max-width: 770px) {
-            font-size: 2rem;
+        @media all and (min-width: 770px) {
 
             &::after {
-                margin-top: 1rem;
+                margin-top: 3.6rem;
             }
         }
     `,

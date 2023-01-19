@@ -12,12 +12,12 @@ interface ProductThumbnailStyledProps {
 
 const S = {
     Container: styled.div`
-        display:flex;
         justify-content: space-between;
+        display: none;
         margin-top: 2rem;
-
-        @media all and (max-width: 770px) {
-            display: none;
+        
+        @media all and (min-width: 770px) {
+            display:flex;
         }
     `,
     ImageThumbnail: styled.img`
