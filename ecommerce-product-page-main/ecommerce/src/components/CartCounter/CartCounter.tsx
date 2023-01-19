@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import * as S from './CartCounter.style';
 
 interface CartCounterComponentProps {
     q: number

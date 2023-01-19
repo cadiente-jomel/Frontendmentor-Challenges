@@ -1,7 +1,7 @@
-// import * as S from './Cart.style';
 import styled from 'styled-components';
-import { S as Styled} from '../Product/Product';
+
 import CheckoutButton  from '../Button/CheckoutButton';
+import { S as Styled} from '../Product/Product';
 
 interface CartComponentProps {
     cartProductQuantity: number,

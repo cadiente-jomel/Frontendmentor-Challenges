@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react';
 import styled from "styled-components";
-// import * as S from './FullCarousel.style';
-import { CarouselContainer } from './Carousel.style';
+
 import Card from '../Card/Card'
+import { S as Styled } from './Carousel';
 import ProductThumbnail from './ProductThumbnail';
 
-interface SProps {
+interface FullCarouselStyledProps {
   isClicked: boolean,
 }
 
@@ -18,7 +18,7 @@ export const S = {
     OverlayContainer: styled.div`
         margin: 0 auto;
         height: 100vh;
-        width: ${(props: SProps) => props.isClicked ? "100vw" : "0vw"};
+        width: ${(props: FullCarouselStyledProps) => props.isClicked ? "100vw" : "0vw"};
         position: fixed;
         z-index: 1;
         top: 0;
@@ -86,14 +86,14 @@ export default (props: FullCarouselComponentProps) => {
             <S.CarouselControlBtn onClick={() => setImgIndex((prev: number) =>  prev <= 1 ? 4 : prev - 1)}>
                 <S.CarouselControlIcon src="/assets/images/icon-previous.svg" alt="icon-previous" />
             </S.CarouselControlBtn>
-            <CarouselContainer>
+            <Styled.CarouselContainer>
                 <S.FullCarouselImageContainer>
                     <Card src={`/assets/images/image-product-${imgIndex}.jpg`}/>
                 </S.FullCarouselImageContainer>
                 <S.OverlayThumbnail>
                     <ProductThumbnail setImgIndex={setImgIndex}/>
                 </S.OverlayThumbnail>
-            </CarouselContainer>
+            </Styled.CarouselContainer>
             <S.CarouselControlBtn onClick={() => setImgIndex((prev: number) =>  prev >= 4 ? 1 : prev + 1)}>
                 <S.CarouselControlIcon src="/assets/images/icon-next.svg" alt="icon-next" />
             </S.CarouselControlBtn>

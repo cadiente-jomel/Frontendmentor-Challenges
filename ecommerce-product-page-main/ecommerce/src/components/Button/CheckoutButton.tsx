@@ -1,4 +1,3 @@
-// import * as S from './CheckoutButton.style';
 import styled from 'styled-components';
 import { S as Styled } from './Button';
 

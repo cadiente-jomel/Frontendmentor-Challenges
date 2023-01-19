@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-// import * as S from './Product.style';
-import ProductDetails from '../ProductDetails/ProductDetails';
+
 import Button from '../Button/Button';
-import Quantiy from '../Quantity/Quantity';
 import Carousel from '../Carousel/Carousel';
 import FullCarousel from '../Carousel/FullCarousel';
+import ProductDetails from '../ProductDetails/ProductDetails';
+import Quantiy from '../Quantity/Quantity';
 
 interface ProductComponentProps {
     setCartProductQuantity: Function
@@ -19,7 +19,6 @@ export const S = {
     Row: styled.div`
         display: flex;
         justify-content: center;
-        /* margin: 0 auto; */
         max-width: var(--grid-width);
         gap: 10rem;
 

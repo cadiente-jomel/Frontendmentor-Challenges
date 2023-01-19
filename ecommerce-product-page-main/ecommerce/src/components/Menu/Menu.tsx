@@ -1,11 +1,8 @@
 import styled from 'styled-components';
-// import * as S from './Menu.style';
 
 interface MenuComponentProps {
     menuName: string,
 }
-
-
 
 const S = {
     Menu: styled.li`
@@ -41,7 +38,6 @@ const S = {
         color: var(--black); 
     `
 }
-
 
 export default (props: MenuComponentProps) => (
     <S.Menu>

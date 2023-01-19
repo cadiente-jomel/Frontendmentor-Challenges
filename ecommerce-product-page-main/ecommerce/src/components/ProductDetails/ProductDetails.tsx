@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-// import * as S from './ProductDetails.style'
-
-
 
 const S = {
     CompanyName: styled.p`

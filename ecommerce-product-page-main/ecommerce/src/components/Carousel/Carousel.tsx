@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import styled from 'styled-components';
-import { S as Styled } from './FullCarousel';
-// import * as S from './Carousel.style';
+
 import Card from '../Card/Card';
 import ProductThumbnail from './ProductThumbnail';
+import { S as Styled } from './FullCarousel';
 
 interface CarouselStyledProps {
     isLeft?: boolean,
@@ -14,9 +14,8 @@ interface CarouselComponentProps {
     setShowCarousel: Function
 }
 
-const S = {
+export const S = {
     CarouselContainer: styled.div`
-        /* width: 100%; */
         margin: 0 auto;
         position: relative;
 

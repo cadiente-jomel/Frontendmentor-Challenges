@@ -1,19 +1,20 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import styled from 'styled-components';
-import './App.css';
 
-import Navigation from './components/Navigation/Navigation';
-import Product from './components/Product/Product';
-import Profile from './components/Profile/Profile';
 import Cart from './components/Cart/Cart';
 import CartCounter from './components/CartCounter/CartCounter';
-import { S as Styled } from './components/Product/Product';
-import { OverlayContainer } from './components/Carousel/FullCarousel.style';
+import Navigation from './components/Navigation/Navigation';
 import NavigationMenu, { MobileNavigationMenu } from './components/NavigationMenu/NavigationMenu';
+import { S as OverlayStyled } from './components/Carousel/FullCarousel';
+import Product from './components/Product/Product';
+import Profile from './components/Profile/Profile';
+import { S as Styled } from './components/Product/Product';
 
 const S = {
   MainContainer: styled.main`
     margin-top: 8rem;
+    display: flex;
+    justify-content: center;
   `,
   NavigationMenuContainer: styled.div` 
     background-color: var(--white);
@@ -83,12 +84,12 @@ function App() {
     setShowCart(!showCart);
   }
   return <div>
-  <OverlayContainer isClicked={showOverlay}>
+  <OverlayStyled.OverlayContainer isClicked={showOverlay}>
     <S.NavigationMenuContainer>
       <S.MobileCloseIcon onClick={() => setShowOverlay(false)} src="/assets/images/icon-close.svg" alt="icon-close"/>
       <MobileNavigationMenu/>
     </S.NavigationMenuContainer>
-  </OverlayContainer>
+  </OverlayStyled.OverlayContainer>
   <Navigation> 
     <S.OuterNavigationContainer>
       <S.LogoContainer>

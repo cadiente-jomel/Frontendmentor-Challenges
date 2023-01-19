@@ -1,5 +1,3 @@
-// import * as S from './Profile.style';
-
 import styled from 'styled-components';
 
 

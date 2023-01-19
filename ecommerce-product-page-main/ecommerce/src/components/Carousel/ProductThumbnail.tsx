@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-// import * as S from './ProductThumbnail.style';
 
 interface ProductThumbnailProps {
     setImgIndex: Function

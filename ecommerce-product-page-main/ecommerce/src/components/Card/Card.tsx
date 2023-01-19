@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import * as S from './Card.style';
 
 const S = {
     ProductCard: styled.img`
