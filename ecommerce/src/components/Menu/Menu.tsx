@@ -26,7 +26,7 @@ const S = {
             margin-right: 3rem;
         }
 
-        @media all and (min-width: 770px) {
+        @media all and (min-width: 945px) {
 
             &::after {
                 margin-top: 3.6rem;
